@@ -20,7 +20,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/courses"
-            className="px-6 py-3 border bg-[#1a365d] border-fd-border rounded-lg font-medium hover:bg-[#1a36dd] transition-colors"
+            className="px-6 py-3 border bg-[#1a365d] text-white  border-fd-border rounded-lg font-medium hover:bg-[#1a36dd] transition-colors"
           >
             Explore Courses
           </Link>
@@ -50,7 +50,7 @@ export default function HomePage() {
       </div>
 
       {/* Call to Action */}
-      <div className="w-full max-w-3xl bg-black rounded-lg p-8 text-center">
+      <div className="w-full max-w-3xl bg-[#eec6be] rounded-lg p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Finished Reading Docs?</h2>
         {/* <p className="mb-6 text-fd-muted-foreground">
           Dive into our site

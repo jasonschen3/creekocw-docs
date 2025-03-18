@@ -209,7 +209,7 @@ function CourseCard({
   href: string;
 }) {
   return (
-    <div className="border bg-[#1a365d] border-fd-border rounded-lg p-4 hover:border-fd-primary transition-colors">
+    <div className="border bg-[#eec6be] border-fd-border rounded-lg p-4 hover:border-fd-primary transition-colors">
       <Link href={href} className="block h-full">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-fd-muted-foreground">{description}</p>

@@ -76,6 +76,7 @@ export default function ContributePage() {
           grow our platform. Your contribution makes a difference in the
           academic success of Cherry Creek High School students.
         </p>
+        <br></br>
       </div>
     </main>
   );
