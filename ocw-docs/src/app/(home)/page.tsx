@@ -9,18 +9,18 @@ export default function HomePage() {
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Creek OCW</h1>
         <p className="text-xl text-fd-muted-foreground mb-8">
           Opencourseware provides resources catered towards all students at
-          CCHS. Learn at your own pace with quality courses and materials.
+          CCHS. Accelerate your learning with quality courses and materials.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link
             href="/docs"
-            className="px-6 py-3 bg-[#1a365d] text-white rounded-lg font-medium hover:bg-[#5c0000] transition-colors"
+            className="px-6 py-3 bg-[#1a365d] text-white rounded-lg font-medium hover:bg-[#1a36dd] transition-colors"
           >
             Browse Documentation
           </Link>
           <Link
             href="/courses"
-            className="px-6 py-3 border bg-[#5c0000] border-fd-border rounded-lg font-medium hover:bg-[#1a365d] transition-colors"
+            className="px-6 py-3 border bg-[#1a365d] border-fd-border rounded-lg font-medium hover:bg-[#1a36dd] transition-colors"
           >
             Explore Courses
           </Link>
@@ -50,17 +50,16 @@ export default function HomePage() {
       </div>
 
       {/* Call to Action */}
-      <div className="w-full max-w-3xl bg-fd-accent/20 rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-        <p className="mb-6 text-fd-muted-foreground">
-          Dive into our documentation to learn more about Creek OCW and how to
-          make the most of our resources.
-        </p>
+      <div className="w-full max-w-3xl bg-black rounded-lg p-8 text-center">
+        <h2 className="text-2xl font-bold mb-4">Finished Reading Docs?</h2>
+        {/* <p className="mb-6 text-fd-muted-foreground">
+          Dive into our site
+        </p> */}
         <Link
-          href="/docs/getting-started"
+          href="https://www.creekocw.com/"
           className="px-6 py-3 bg-[#8B0000] text-white rounded-lg font-medium hover:bg-[#5c0000] transition-colors inline-block"
         >
-          Get Started
+          CreekOCW
         </Link>
       </div>
     </main>

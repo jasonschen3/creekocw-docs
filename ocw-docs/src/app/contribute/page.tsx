@@ -3,11 +3,7 @@ export default function ContributePage() {
     <main className="flex flex-1 flex-col p-6 max-w-3xl mx-auto prose">
       <h1>Contribute to Creek OCW</h1>
 
-      <p>
-        We welcome contributions from educators, developers, and content
-        creators who want to help make educational content more accessible.
-      </p>
-
+      <p>We welcome contributions from teachers and students.</p>
       <h2>How to Contribute</h2>
 
       <ol>
@@ -16,12 +12,11 @@ export default function ContributePage() {
           exercises, or improvements to existing content.
         </li>
         <li>
-          <strong>Code Contributions</strong>: Help improve the platform by
-          contributing to our codebase.
+          <strong>Tutor</strong>: Teacher others the material you learn.
         </li>
         <li>
-          <strong>Documentation</strong>: Help improve our documentation and
-          tutorials.
+          <strong>Code Contributions</strong>: Help improve the platform by
+          contributing to our codebase.
         </li>
       </ol>
 
@@ -30,10 +25,10 @@ export default function ContributePage() {
       <p>
         To get started, please visit our{" "}
         <a
-          href="https://github.com/your-organization/creek-ocw"
+          href="https://github.com/CCHS-Computer-Science-Honors-Society/ocw"
           className="text-fd-primary hover:underline"
         >
-          GitHub repository
+          GitHub
         </a>{" "}
         and check out the contribution guidelines.
       </p>
