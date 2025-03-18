@@ -1,6 +1,209 @@
 ---
 title: Technical
-description: Technical Documentation
+description: Creek OCW technical documentation
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+# Overview
+
+The platform is built using modern web technologies with a focus on **performance, accessibility, and user experience**.
+
+## Tech Stack
+
+### Core Technologies
+
+- **Next.js 15**: React framework for server and client rendering
+- **TypeScript**: For type-safe code
+- **Tailwind CSS**: For styling with utility classes
+- **Drizzle ORM**: Database ORM for PostgreSQL
+- **NextAuth**: Authentication system
+- **tRPC**: Type-safe API development
+
+### Database
+
+- **PostgreSQL**: Main database (via Neon serverless Postgres)
+- **Vector search**: For AI-powered flashcard and content search
+
+## UI Components
+
+- **Shadcn UI**: Component library built on Radix UI primitives
+- **Framer Motion**: Animation library
+- **Lucide**: Icon library
+- **Embla Carousel**: For carousel components
+
+## Content Editing
+
+- **Novel**: Rich text editor based on Tiptap
+- **react-notion-x**: Notion content renderer
+
+## Architecture
+
+### Directory Structure
+
+```plaintext
+src/
+├── app/               # Next.js app router pages
+│   ├── (admin)/       # Admin section routes
+│   ├── (root)/        # Main site routes
+│   │   ├── (course)/  # Course-related pages
+│   │   ├── (marketing)/ # Landing/marketing pages
+├── api/               # API routes
+├── components/        # Reusable UI components
+│   ├── ui/            # Base UI components
+│   ├── render/        # Content rendering components
+├── editor/            # Rich text editor components
+├── server/            # Server-side code
+│   ├── api/           # API definitions
+│   ├── auth/          # Authentication
+│   ├── db/            # Database schema and queries
+├── styles/            # Global CSS
+├── lib/               # Utility functions
+├── data/              # Seed data and data management
+├── trpc/              # tRPC Client/server setup
+├── public/            # Static assets
+```
+
+## Key Features
+
+### Course Management System
+
+The platform organizes content into a hierarchical structure:
+
+- **Courses**: Top-level container (e.g., "AP Biology")
+- **Units**: Sections within courses (e.g., "Cell Biology")
+- **Lessons**: Individual learning materials
+
+Each course belongs to a subject category and can have multiple units, which in turn contain multiple lessons. Content can be organized and reordered through drag-and-drop interfaces in the admin panel.
+
+### Content Types
+
+The platform supports multiple content types:
+
+- **TipTap Editor**: Rich text content with formatting
+- **Google Docs**: Embedded Google documents
+- **Quizlet**: Flashcard integration
+- **Notion**: Embedded Notion pages
+- **External Links**: Pure links to external resources
+
+### User Roles and Permissions
+
+There are multiple user roles:
+
+- **Admin**: Full access to all features and courses
+- **Editor**: Can edit specific courses
+- **User**: Basic access to view content
+
+### UI Components
+
+The platform uses a design system built on **Shadcn UI** with customizations:
+
+- **Sidebar**: Navigation component with collapsible sections
+- **Carousel**: For showcasing featured content
+- **Cards**: For displaying courses and lessons
+- **Forms**: For creating and editing content
+
+## Search and Discovery
+
+Multiple ways to find content:
+
+- **Text Search**: With full-text search capability
+- **Course Browser**: Browsable course listings
+- **Subject Navigation**: In the explore menu
+- **AI Search**: Vector-based search for flashcards
+
+## Data Management
+
+### Database Schema
+
+The database schema includes several key tables:
+
+- `🗂 users`: User accounts and authentication
+- `🗂 courses`: Course information and metadata
+- `🗂 units`: Units within courses
+- `🗂 lessons`: Content items within units
+- `lesson_embed`: External content links
+- `course_users`: Mapping between users and courses (permissions)
+- `easy_note_card`: Flashcards with vector embeddings
+
+<img src="https://ugakd4mkxv.ufs.sh/f/QRXW6mPDvNgcfwGCGAXv5c4nkOatgwsmYj96KRpli3hUEdx1"></img>
+
+### Content Creation Flow
+
+1. Administrators create courses
+2. Units are created within courses
+3. Lessons are added to units
+4. Content is created or embedded from external sources
+5. Published status controls visibility to end users
+
+### Authentication
+
+The application uses **NextAuth** with **Google OAuth** provider for authentication:
+
+- **Session management**
+- **Role-based authorization**
+- **Course-specific permissions**
+
+## Frontend Architecture
+
+### Routing
+
+Uses **Next.js App Router** with nested layouts:
+
+- **Dynamic routes** for courses, units, and lessons
+- **Layout components** for consistent UI across pages
+- **Server and client components** intelligently separated
+
+### UI Framework
+
+The UI is built using a **component-based approach**:
+
+- **Design tokens** in CSS variables for theming
+- **Responsive layouts** for all device sizes
+- **Server components** where possible for performance
+- **Client components** with interactivity
+
+### Performance Optimizations
+
+- **Server-side rendering** for fast initial loads
+- **Image optimization** with Next.js
+- **Response caching** (like in the flashcards API)
+- **Code splitting** for reduced bundle sizes
+
+### Deployment
+
+The application is deployed on **Vercel** with:
+
+- **Continuous integration** via GitHub Actions
+- **Environment variable management**
+- **Database connection** to **Neon PostgreSQL**
+
+## Development Workflow
+
+### Setup Process
+
+1. Clone repository
+2. Copy `.env.example` to `.env`
+3. Install dependencies with **Bun**
+4. Start development server with `bun dev`
+
+### Contributing Guidelines
+
+- **Conventional commits** for version control
+- **Pull request workflow** for code reviews
+- **Testing requirements** for new features
+
+## Documentation
+
+- 📄 **[README.md](#)**: Project overview and setup instructions
+- 📄 **[SETUP.md](#)**: Detailed development environment setup
+- **Code comments** throughout the codebase
+
+## Conclusion
+
+The **Cherry Creek High School OCW** platform is a sophisticated educational resource system built with modern web technologies. The codebase is organized to be **maintainable, extensible, and performant**, providing a solid foundation for both current features and future enhancements.
+
+<Cards>
+  <Card
+    title="Github"
+    href="https://github.com/CCHS-Computer-Science-Honors-Society/ocw"
+  />
+</Cards>
