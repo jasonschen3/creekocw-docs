@@ -72,11 +72,10 @@ export default function ContributePage() {
           Join Our Community
         </h3>
         <p className="mb-0 text-gray-200">
-          We're always looking for passionate students and teachers to help grow
-          our platform. Your contribution makes a difference in the academic
-          success of Cherry Creek High School students.
+          We&apos;re always looking for passionate students and teachers to help
+          grow our platform. Your contribution makes a difference in the
+          academic success of Cherry Creek High School students.
         </p>
-        <br></br>
       </div>
     </main>
   );
