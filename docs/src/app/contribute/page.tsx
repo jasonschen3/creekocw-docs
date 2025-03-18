@@ -27,6 +27,7 @@ export default function ContributePage() {
         <a
           href="https://github.com/CCHS-Computer-Science-Honors-Society/ocw"
           className="text-fd-primary hover:underline"
+          target="_blank"
         >
           GitHub
         </a>{" "}
