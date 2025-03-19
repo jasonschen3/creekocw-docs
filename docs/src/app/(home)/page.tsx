@@ -50,7 +50,7 @@ export default function HomePage() {
       </div>
 
       {/* Call to Action */}
-      <div className="w-full max-w-3xl bg-[#eec6be] rounded-lg p-8 text-center">
+      <div className="w-full max-w-3xl bg-[#eec6be] text-black rounded-lg p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Finished Reading Docs?</h2>
         {/* <p className="mb-6 text-fd-muted-foreground">
           Dive into our site

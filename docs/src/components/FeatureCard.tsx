@@ -14,9 +14,9 @@ export function FeatureCard({
   linkText,
 }: FeatureCardProps) {
   return (
-    <div className="border border-fd-border rounded-lg p-6 hover:border-[#8B0000] bg-[#eec6be] transition-colors flex flex-col">
+    <div className="border border-fd-border text-black rounded-lg p-6 hover:border-[#8B0000] bg-[#eec6be] transition-colors flex flex-col">
       <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-fd-muted-foreground mb-4 flex-grow">{description}</p>
+      <p className="text-gray-foreground mb-4 flex-grow">{description}</p>
       <Link href={link} className="text-[#8B0000] hover:underline font-medium">
         {linkText} →
       </Link>
